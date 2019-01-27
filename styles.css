@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Krub');
+.container {
+    width: 50%;
+    margin: 50px auto;
+}
+#recipe {
+    margin-top: 30px;
+}
+button {
+    padding: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee;
+    font-family: 'Krub', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover {
+    background-color: #ccc;
+}
+p {
+    font-family: 'Krub', sans-serif;
+    color: #555;
+}
