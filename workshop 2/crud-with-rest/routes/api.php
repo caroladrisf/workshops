@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('students', 'StudentController@index');
 Route::post('students', 'StudentController@create');
+Route::put('students/{id}', 'StudentController@update');
+Route::delete('students/{id}', 'StudentController@delete');
