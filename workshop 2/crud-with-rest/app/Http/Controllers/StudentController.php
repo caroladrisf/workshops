@@ -11,4 +11,9 @@ class StudentController extends Controller
         $students = Student::all();
         return $students;
     }
+
+    public function create(Request $req) {
+        $student = Student::create($req->all());
+        return $student;
+    }
 }
