@@ -17,7 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('students', 'StudentController@index');
-Route::post('students', 'StudentController@create');
-Route::put('students/{id}', 'StudentController@update');
-Route::delete('students/{id}', 'StudentController@delete');
+Route::middleware(['auth.basic'])->group(function() {
+// Route::middleware(['basicAuth'])->group(function() {
+    Route::get('students', 'StudentController@index');
+    Route::post('students', 'StudentController@create');
+    Route::put('students/{id}', 'StudentController@update');
+    Route::delete('students/{id}', 'StudentController@delete');
+});
